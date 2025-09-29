@@ -51,7 +51,25 @@ def main() -> None:
     x = -123
 
     # The type of a variable cannot change throughout a program
-    x = 3.14
+    # x = 3.14
+
+    x = x + 12
+
+    print(x)
+
+    x = x + 1
+    x += 1
+    ++x
+
+    '''
+    Everything in the
+    middle
+    is
+    a
+    comment
+    '''
+
+    
     
 
 if __name__ == '__main__':
