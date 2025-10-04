@@ -1,3 +1,12 @@
+# In Python, there are no constants
+
+# However, there is a convention: variables that you don't WANT to be modified
+# should be named in ALL_CAPS
+
+# Global variables are bad. But global "constants" are okay.
+
+PI = 3.14
+
 def main() -> None:
     # An expression is a piece of code with a type and a value
     
@@ -59,7 +68,7 @@ def main() -> None:
 
     x = x + 1
     x += 1
-    ++x
+    # ++x # This is not actually an increment operator. This does nothing.
 
     '''
     Everything in the
