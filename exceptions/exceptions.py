@@ -14,16 +14,19 @@ def salary(job_title: str, years_worked: int) -> int:
         else:
             return 131000
     
-    # Error codes. These are messy.
-    return -1
+    raise ValueError(f'Bad job title {job_title}')
 
 def main() -> None:
-    x = salary('software engineer', 10)
+    job_title = input('What is your job title?: ')
+    years_worked = int(input('How many years have you worked?: '))
+    expected_salary = salary(job_title, years_worked)
 
-    my_list = [True, False, False]
+    #x = salary('software engineer', 10)
+
+    #my_list = [True, False, False]
 
     # Throws an exception. Specifically an IndexError
-    print(my_list[3]) # What does this do? Out of bounds / out of range
+    #print(my_list[3]) # What does this do? Out of bounds / out of range
 
     # What is an exception??
 
