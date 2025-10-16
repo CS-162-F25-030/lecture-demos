@@ -8,7 +8,7 @@ def extract_ages(people_file: TextIO) -> list[int]:
         if first_line:
             first_line = False
             continue
-
+        line = line.strip()
         # Body goes here
         # Goal: Extract the person's age from the line
         # string split() method extracts tokens from a string given a
