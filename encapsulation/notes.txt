@@ -1,0 +1,28 @@
+Software design. The study of how to write code that is good.
+
+We're interested in discussing code quality. There are a lot of attributes
+to code quality. Readability, performance, scalability, maintainability.
+
+Maintainability: How easy is it to change the code?
+
+Encapsulation. Our definition: "Co-location" or "bundling" of data with the
+behaviors that operate on that data.
+
+Encapsulation can help improve code maintainability in a couple ways:
+1) It helps reign in coupling.
+2) It helps establish class invariants.
+
+Coupling. Our definition: A situation wherein modifying one piece of code
+requires modifying one or more other pieces of code in adddition. It makes
+code hard to change.
+
+Coupling is inevitable. You can't fully prevent coupling. Coupling always
+occurs at interfaces. Changing interfaces is difficult.
+
+But that doesn't mean that we can't do anything about it. Encapsulation
+can help you do these things:
+1) We can reduce unnecessary coupling.
+2) Isolate / contain coupling.
+3) You can move coupling around such that the components of code with the
+	most coupling are the ones that almost never to be changed.
+	Absorb coupling through "stable interfaces."
