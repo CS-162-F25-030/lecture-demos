@@ -26,3 +26,10 @@ can help you do these things:
 3) You can move coupling around such that the components of code with the
 	most coupling are the ones that almost never to be changed.
 	Absorb coupling through "stable interfaces."
+
+Information hiding is a way of enforcing encapsulation.
+
+Information hiding does another thing: it helps establish "class invariants".
+
+A class invariant is a property of an object that is guaranteed to ALWAYS be
+true.
