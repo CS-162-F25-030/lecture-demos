@@ -5,11 +5,14 @@ from sled import Sled
 def main() -> None:
     santas_sleigh = Sled()
 
-    spot = Dog('Spot')
-    spot.bark()
+    spot = Dog('Jeff', 'Spot')
+    spot.vocalize()
+    spot.print()
 
-    fluffy = Husky('Fluffy')
-    fluffy.bark()
+    fluffy = Husky('Jill', 'Fluffy')
+    # This, by default, calls the derived-class vocalize() method
+    fluffy.vocalize()
+    fluffy.print()
 
     fluffy.pull_sled(santas_sleigh)
     fluffy.pull_sled(santas_sleigh)

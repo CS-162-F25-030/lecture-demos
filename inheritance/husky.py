@@ -28,12 +28,29 @@ class Husky(Dog):
 
     _energy: int
 
-    def __init__(self, name: str) -> None:
+
+    # Every husky has TWO __init__ methods
+    def __init__(self, owners_name: str, name: str) -> None:
         # The goal is to initialize this husky's _name attribute
-        super().__init__(name)
+        # This will call the derived class's __init__ method
+        super().__init__(owners_name, name)
         self._energy = 100
 
     def pull_sled(self, sled: Sled) -> None:
         if self._energy > 50:
             sled.distance_traveled += 10 # The husky pulled the sled 10 miles
             self._energy -= 10
+
+    # Here, we can override the inherited vocalize() method.
+    # What that means is that we define ANOTHER method named vocalize()
+    # with the same parameter types and return type.
+    def vocalize(self) -> None:
+        # This method can do whatever we want it to do. This is the override.
+        print('Awooo!')
+
+    def print(self) -> None:
+        # Here, we can print ALL the attributes of the husky
+        # We can call one of self's methods that it inherited from the Dog
+        # class that simply prints its name to the terminal
+        super().print() # This calls the Dog class print method() on self
+        print(f'Energy: {self._energy}')
