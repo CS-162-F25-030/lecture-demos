@@ -7,6 +7,13 @@ from monster import Monster
 # Polymorphism: "Many forms". A variable that can take on one of many types.
 # We're specifically doing subtype polymorphism.
 
+# Binding means to associate a symbol with a definition.
+# A symbol is just a name for something.
+
+# Two main ways of function binding:
+# 1. Dynamic binding. In Python, there's only dynamic binding.
+# 2. Static binding. In many other languages, this is the default.
+
 # This function is the main "game loop". In other words, it contains
 # the loop that runs the monsters' turns over and over again until the
 # game ends (i.e., until the player loses)
@@ -67,7 +74,8 @@ def main() -> None:
     # this course):
     monsters: list[Monster] = []
     for _ in range(3):
-        monsters.append(Zombie()) # This is also an example of upcasting. Implicit upcasting.
+        # This is also an example of upcasting. Implicit upcasting.
+        monsters.append(Zombie())
 
     for _ in range(4):
         monsters.append(Vampire())
